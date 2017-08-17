@@ -35,7 +35,7 @@ class App extends Service
 		$di = \Phalcon\DI\FactoryDefault::getDefault();
 		$www_root = $di->get('path')['root'];
 		
-		$file = "$www_root/public/downloads/apretaste.apk";
+		$file = "$www_root/public/download/apretaste.apk";
 		
 		$response->createFromTemplate("apk.tpl", [], [], [$file]);
 		return $response;
@@ -51,7 +51,7 @@ class App extends Service
 		$di = \Phalcon\DI\FactoryDefault::getDefault();
 		$www_root = $di->get('path')['root'];
 		
-		$file = "$www_root/public/downloads/apretaste.rar";
+		$file = "$www_root/public/download/apretaste.rar";
 		
 		$response->createFromTemplate("rar.tpl", [], [], [$file]);
 		return $response;
