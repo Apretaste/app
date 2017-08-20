@@ -1,6 +1,6 @@
 <service>
 	<serviceName>app</serviceName>
-	<serviceDescription>Descarga la app de Apretaste en varias opciones y formatos</serviceDescription>
+	<serviceDescription>Descarga la app de Apretaste. Varias opciones y formatos de obtenerla.</serviceDescription>
 	<creatorEmail>kumahavana@gmail.com</creatorEmail>
 	<serviceCategory>ocio</serviceCategory>
 	<serviceUsage>
@@ -16,4 +16,5 @@
 	</serviceUsage>
 	<group>download</group>
 	<listed>0</listed>
+	<showAds>0</showAds>
 </service>
