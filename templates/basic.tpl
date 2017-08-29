@@ -10,7 +10,11 @@
 <p>Si desea recibir la app por correo comprimida en formato RAR (1.90 MB), presione {link href="APP RAR" caption ="este link"}, o env&iacute;e un email a {APRETASTE_EMAIL} y escriba en el asunto "APP RAR". Necesitar&aacute; una aplicaci&oacute;n que sea capaz de descomprimir archivos RAR.
 {space5}
 
-<p><b>3) Descargar desde el WiFi</b></p>
+<p><b>3) Instalar desde el Play Store (recomendado)</b></p>
+<p>Si est&aacute; conectado al WiFi puede <a href="https://play.google.com/store/apps/details?id=com.apretaste.apretaste">instalar la aplicaci&oacute;n directamente desde el mercado de Android</a>. Esta es la forma m&aacute;s sencilla de siempre tener la &uacute;ltima versi&oacute;n.</p>
+{space5}
+
+<p><b>4) Descargar desde el WiFi</b></p>
 <p>Si desea descargar la app por WiFi, presione el siguiente link: <a href="https://rebrand.ly/apretaste">https://rebrand.ly/apretaste</a></p>
 {space5}
 
