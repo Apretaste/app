@@ -11,7 +11,7 @@
 {space5}
 
 <p><b>3) Instalar desde el Play Store (recomendado)</b></p>
-<p>Si est&aacute; conectado al WiFi puede <a href="https://play.google.com/store/apps/details?id=com.apretaste.apretaste">instalar la aplicaci&oacute;n directamente desde el mercado de Android</a>. Esta es la forma m&aacute;s sencilla de siempre tener la &uacute;ltima versi&oacute;n.</p>
+<p>Si est&aacute; conectado al WiFi puede <a href="https://goo.gl/1hBhjm">instalar la aplicaci&oacute;n directamente desde el mercado de Android</a>. Esta es la forma m&aacute;s sencilla de siempre tener la &uacute;ltima versi&oacute;n.</p>
 {space5}
 
 <p><b>4) Descargar desde el WiFi</b></p>
