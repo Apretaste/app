@@ -14,45 +14,75 @@ class App extends Service
 	 *
 	 * @param Request
 	 * @return Response
-	 * */
+	 */
 	public function _main(Request $request)
 	{
 		$response = new Response();
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("basic.tpl", []);
+		$response->createFromTemplate("basic.tpl", array());
 		return $response;
 	}
 
+	/**
+	 * Download the app as an APK file
+	 *
+	 * @param Request
+	 * @return Response
+	 */
 	public function _apk(Request $request)
 	{
 		// get path to the www folder
 		$di = \Phalcon\DI\FactoryDefault::getDefault();
-		$www_root = $di->get('path')['root'];
+		$wwwroot = $di->get('path')['root'];
 
 		// get the file to attach
-		$file = "$www_root/public/download/apretaste.apk";
+		$file = "$wwwroot/public/download/apretaste.apk";
 
 		$response = new Response();
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("apk.tpl", [], [], [$file]);
+		$response->createFromTemplate("apk.tpl", array(), array(), [$file]);
 		return $response;
 	}
 
+	/**
+	 * Download the app as a RAR file
+	 *
+	 * @param Request
+	 * @return Response
+	 */
 	public function _rar(Request $request)
 	{
 		// get path to the www folder
 		$di = \Phalcon\DI\FactoryDefault::getDefault();
-		$www_root = $di->get('path')['root'];
+		$wwwroot = $di->get('path')['root'];
 
 		// get the file to attach
-		$file = "$www_root/public/download/apretaste.rar";
+		$file = "$wwwroot/public/download/apretaste.rar";
 
 		$response = new Response();
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("rar.tpl", [], [], [$file]);
+		$response->createFromTemplate("rar.tpl", array(), array(), [$file]);
+		return $response;
+	}
+
+	/**
+	 * List the ways to download the app
+	 *
+	 * @param Request
+	 * @return Response
+	 */
+	public function _download(Request $request)
+	{
+		// get the latest version of the app
+		$di = \Phalcon\DI\FactoryDefault::getDefault();
+		$version = $di->get('config')['global']['appversion'];
+
+		$response = new Response();
+		$response->setCache("month");
+		$response->createFromTemplate("download.tpl", array("version"=>$version));
 		return $response;
 	}
 }
