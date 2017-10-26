@@ -18,4 +18,4 @@
 <p>Si desea descargar la app por WiFi, presione el siguiente link: <a href="https://rebrand.ly/navegacuba">rebrand.ly/navegacuba</a></p>
 {space5}
 
-<p>Por ahora solo ofrecemos la versi&oacute;n para Android, en un futuro agregaremos IOS. Gracias por usar nuestra app, y si tiene cualquier pregunta o sugerencia, escr&iacute;banos a <a href="mailto:opiniones.app@gmail.com">opiniones.app@gmail.com</a>.</p>
+<p>Por ahora solo ofrecemos la versi&oacute;n para Android, en un futuro agregaremos IOS. Gracias por usar nuestra app, y si tiene cualquier pregunta o sugerencia, escr&iacute;banos a <a href="mailto:{APRETASTE_SUPPORT_EMAIL}">{APRETASTE_SUPPORT_EMAIL}</a>.</p>
