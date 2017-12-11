@@ -18,6 +18,7 @@ class App extends Service
 	public function _main(Request $request)
 	{
 		$response = new Response();
+		$response->setCache("month");
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
 		$response->createFromTemplate("basic.tpl", array());
@@ -65,24 +66,6 @@ class App extends Service
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
 		$response->createFromTemplate("rar.tpl", array(), array(), [$file]);
-		return $response;
-	}
-
-	/**
-	 * List the ways to download the app
-	 *
-	 * @param Request
-	 * @return Response
-	 */
-	public function _download(Request $request)
-	{
-		// get the latest version of the app
-		$di = \Phalcon\DI\FactoryDefault::getDefault();
-		$version = $di->get('config')['global']['appversion'];
-
-		$response = new Response();
-		$response->setCache("month");
-		$response->createFromTemplate("download.tpl", array("version"=>$version));
 		return $response;
 	}
 }
