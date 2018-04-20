@@ -1,7 +1,7 @@
 <service>
 	<serviceName>app</serviceName>
 	<serviceDescription>Descarga la app de Apretaste. Varias opciones y formatos de obtenerla.</serviceDescription>
-	<creatorEmail>kumahavana@gmail.com</creatorEmail>
+	<creatorEmail>salvi@apretaste.com</creatorEmail>
 	<serviceCategory>ocio</serviceCategory>
 	<listed>0</listed>
 </service>

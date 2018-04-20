@@ -17,11 +17,15 @@ class App extends Service
 	 */
 	public function _main(Request $request)
 	{
+		// get email mailbox
+		$delivery = Connection::query("SELECT email FROM delivery_input WHERE environment='email' AND active=1 ORDER BY RAND() LIMIT 1");
+		$mailbox = $delivery[0]->email . "+" . $request->username . "@gmail.com";
+
 		$response = new Response();
 		$response->setCache("month");
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("basic.tpl", array());
+		$response->createFromTemplate("basic.tpl", ["mailbox"=>$mailbox]);
 		return $response;
 	}
 
@@ -43,7 +47,7 @@ class App extends Service
 		$response = new Response();
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("apk.tpl", array(), array(), [$file]);
+		$response->createFromTemplate("apk.tpl", [], [], [$file]);
 		return $response;
 	}
 
@@ -65,7 +69,7 @@ class App extends Service
 		$response = new Response();
 		$response->setEmailLayout("email_empty.tpl");
 		$response->setResponseSubject("Descarga la App");
-		$response->createFromTemplate("rar.tpl", array(), array(), [$file]);
+		$response->createFromTemplate("rar.tpl", [], [], [$file]);
 		return $response;
 	}
 }
