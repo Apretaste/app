@@ -19,7 +19,7 @@ class App extends Service
 	{
 		// get email mailbox
 		$delivery = Connection::query("SELECT email FROM delivery_input WHERE environment='email' AND active=1 ORDER BY RAND() LIMIT 1");
-		$mailbox = $delivery[0]->email . "+" . $request->username . "@gmail.com";
+		$mailbox = $delivery[0]->email . "@gmail.com";
 
 		$response = new Response();
 		$response->setCache("month");
